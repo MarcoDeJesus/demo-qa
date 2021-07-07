@@ -2,6 +2,6 @@ package refactored.automationframework.configurations;
 
 import org.openqa.selenium.WebDriver;
 
-public interface DriverConfigurations {
+public interface WebDriverConfigurations {
     WebDriver getWebDriverInstance();
 }

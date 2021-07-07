@@ -1,9 +1,8 @@
 package com.printapp;
 
 import org.openqa.selenium.WebDriver;
-import refactored.automationframework.configurations.ChromeDriverConfigurations;
+import refactored.automationframework.configurations.ChromeWebDriverConfigurations;
 import refactored.automationframework.core.WebDriverManager;
-import refactored.automationframework.exceptions.WebDriverNotImplementedException;
 
 public class BaseTest {
 
@@ -11,12 +10,8 @@ public class BaseTest {
     protected WebDriver driver;
 
     public void SetUp(){
-        try {
-            driver = new WebDriverManager().getWebDriverInstance(new ChromeDriverConfigurations());
-            driver.navigate().to(WEB_APPLICATION_URL);
-        } catch (WebDriverNotImplementedException e) {
-            e.printStackTrace();
-        }
+        driver = new WebDriverManager().getWebDriverInstance(new ChromeWebDriverConfigurations());
+        driver.navigate().to(WEB_APPLICATION_URL);
     }
 
     public void CleanUp(){

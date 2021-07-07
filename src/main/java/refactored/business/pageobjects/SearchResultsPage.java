@@ -10,7 +10,7 @@ import java.util.List;
 
 public class SearchResultsPage extends BasePage{
 
-    private static int TOTAL_PRODUCTS_IN_SEARCH_RESULT;
+    private static int totalProductsInSearchResultPage;
 
     @FindBy(how = How.TAG_NAME, using = "h1")
     private WebElement header;
@@ -33,12 +33,12 @@ public class SearchResultsPage extends BasePage{
     }
 
     public int getNumberOfProductsInCurrentPage(){
-        TOTAL_PRODUCTS_IN_SEARCH_RESULT += productsInCurrentPageList.size();
+        totalProductsInSearchResultPage += productsInCurrentPageList.size();
         return productsInCurrentPageList.size();
     }
 
     public void clickOnNextButton() {
-        final int LAST_POSITION = 1;
+        final var LAST_POSITION = 1;
         int paginationItemsCount = paginationActionButtonList.size();
         int lastElementPosition = paginationItemsCount - LAST_POSITION;
         WebElement lastElement = paginationActionButtonList.get(lastElementPosition);
@@ -54,6 +54,6 @@ public class SearchResultsPage extends BasePage{
     }
 
     public int getTotalProductsInSearchResult(){
-        return TOTAL_PRODUCTS_IN_SEARCH_RESULT;
+        return totalProductsInSearchResultPage;
     }
 }

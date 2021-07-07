@@ -6,10 +6,10 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.io.File;
 
-public class FirefoxDriverConfigurations implements DriverConfigurations{
+public class FirefoxWebDriverConfigurations implements WebDriverConfigurations {
 
-    private final String WEB_DRIVER_FIREFOX_DRIVER_PROPERTY = "webdriver.gecko.driver";
-    private final String FIREFOX_PATH = "src/main/resources/geckodriver";
+    private static final String WEB_DRIVER_FIREFOX_DRIVER_PROPERTY = "webdriver.gecko.driver";
+    private static final String FIREFOX_PATH = "src/main/resources/geckodriver";
 
     @Override
     public FirefoxDriver getWebDriverInstance(){
