@@ -8,7 +8,7 @@ import refactored.business.pageobjects.SearchResultsPage;
 
 import static org.testng.Assert.assertEquals;
 
-public class SearchFunctionalityTest extends BaseTest{
+public class SearchFunctionalityTest extends Base {
     @BeforeClass
     public void BeforeClass(){
         SetUp();

@@ -33,7 +33,7 @@ public class SearchResultsPage extends BasePage{
     }
 
     public int getNumberOfProductsInCurrentPage(){
-        totalProductsInSearchResultPage += productsInCurrentPageList.size();
+        setTotalProductsInSearchResultPage(productsInCurrentPageList.size());
         return productsInCurrentPageList.size();
     }
 
@@ -55,5 +55,9 @@ public class SearchResultsPage extends BasePage{
 
     public int getTotalProductsInSearchResult(){
         return totalProductsInSearchResultPage;
+    }
+
+    private static void setTotalProductsInSearchResultPage(int productsInPage){
+        totalProductsInSearchResultPage += productsInPage;
     }
 }
