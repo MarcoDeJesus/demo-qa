@@ -3,7 +3,6 @@ package com.printapp;
 import org.openqa.selenium.WebDriver;
 import refactored.automationframework.configurations.ChromeDriverConfigurations;
 import refactored.automationframework.core.WebDriverManager;
-import refactored.automationframework.enums.WebBrowsers;
 import refactored.automationframework.exceptions.WebDriverNotImplementedException;
 
 public class BaseTest {

@@ -1,10 +1,7 @@
 package refactored.automationframework.core;
 
 import org.openqa.selenium.WebDriver;
-import refactored.automationframework.configurations.ChromeDriverConfigurations;
 import refactored.automationframework.configurations.DriverConfigurations;
-import refactored.automationframework.configurations.FirefoxDriverConfigurations;
-import refactored.automationframework.enums.WebBrowsers;
 import refactored.automationframework.exceptions.WebDriverNotImplementedException;
 
 import java.util.concurrent.TimeUnit;
