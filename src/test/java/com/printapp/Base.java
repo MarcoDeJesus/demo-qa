@@ -11,7 +11,7 @@ public class Base {
     protected WebDriver driver;
 
     public void SetUp(){
-        driver = new WebDriverManager().getWebDriverInstance(new FirefoxWebDriverConfigurations());
+        driver = new WebDriverManager().getWebDriverInstance(new ChromeWebDriverConfigurations());
         driver.navigate().to(WEB_APPLICATION_URL);
     }
 

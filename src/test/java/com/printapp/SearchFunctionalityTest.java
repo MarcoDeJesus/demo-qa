@@ -21,14 +21,17 @@ public class SearchFunctionalityTest extends Base {
 
     @Test
     public void GivenASearchText_WhenValidatingResults_CorrectCountIsReturned(){
+        // Arrange
         SearchResultsPage resultsPage = new HomePage(driver)
                 .searchProductsByText("tshirt");
 
+        // Act
         int productsInPageOne = resultsPage.getNumberOfProductsInCurrentPage();
         resultsPage.clickOnNextButton();
         int productsInPageTwo = resultsPage.getNumberOfProductsInCurrentPage();
         int totalNumberOfProducts = productsInPageOne + productsInPageTwo;
 
+        // Assert
         assertEquals(resultsPage.getHeaderText(), "Search results: “tshirt” – Page 2", "The Header text is not correct.");
         assertEquals(productsInPageOne, 9, "Number of products is not correct.");
         assertEquals(productsInPageTwo, 1, "Number of products is not correct.");
