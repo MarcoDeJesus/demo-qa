@@ -60,4 +60,8 @@ public class SearchResultsPage extends BasePage{
     private static void setTotalProductsInSearchResultPage(int productsInPage){
         totalProductsInSearchResultPage += productsInPage;
     }
+
+    public static void resetTotalProductsInSearchResultPage(){
+        totalProductsInSearchResultPage = 0;
+    }
 }

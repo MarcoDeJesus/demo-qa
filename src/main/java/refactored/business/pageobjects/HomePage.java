@@ -16,6 +16,7 @@ public class HomePage extends BasePage{
     }
 
     public SearchResultsPage searchProductsByText(String searchText){
+        searchBox.clear();
         searchBox.sendKeys(searchText);
         searchBox.sendKeys(Keys.ENTER);
 
